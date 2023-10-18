@@ -84,7 +84,8 @@ def preprocess_image(image, target_size):
 
 def model_inferance(np_arr):
     # file_dir = f"{os.getcwd()}/mysite/models/"
-    file_dir = f"{os.getcwd()}/models/"
+    # file_dir = f"{os.getcwd()}/models/"
+    file_dir = "./drive/MyDrive/Project Backup/DRE-Instance-4-Segmentation/"
     path_EX = f"{file_dir}/VGG16_backbone_unet_Instance-EX_Data-imputed_imagenet-Freeze_1024x1024x1_E-1000"
     path_HE = f"{file_dir}/VGG16_backbone_unet_Instance-HE_Data-imputed_imagenet-Freeze_1024x1024x1_E-1000"
     path_MA = f"{file_dir}/VGG16_backbone_unet_Instance-MA_Data-imputed_imagenet-Freeze_1024x1024x1_E-1000"
