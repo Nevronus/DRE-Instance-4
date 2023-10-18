@@ -1,0 +1,22 @@
+CREATE:
+docker build -t dre-instance-4-segmentation-api .
+
+RUN WITH VOLUME (PERSISTENT CODE | RUN IN BACKGROUND):
+docker run --name dre-container -p 8080:8080 -d -v $(pwd):/core dre-instance-4-segmentation-api 
+
+RUN NORMAL:
+docker run --name dre-container -p 8080:8080 $(pwd):/core dre-instance-4-segmentation-api 
+docker run --name dre-container -p 8080:8080 dre-instance-4-segmentation-api
+
+CHECK STATUS:
+docker ps
+
+STOP CONTAINER:
+docker stop dre-container
+
+REMOVE CONTAINER:
+docker rm dre-container
+
+COMPOSER:
+docker-compose up
+docker-compose down
